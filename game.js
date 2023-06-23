@@ -46,7 +46,7 @@ function checkAnswer(currentLevel) {
 
   } else {
 
-    console.log("wrong");
+    $("#level-title-h1").text("Your Score : "+(level - 1));
     playSound("wrong");
     $("body").addClass("game-over");
     setTimeout(function() {
@@ -63,8 +63,8 @@ function checkAnswer(currentLevel) {
   function nextSequence() {
 
     userClickedPattern = [];
-  
     level++;
+    $("#level-title-h1").text("Memory Test");
     $("#level-title").text("Level " + level);
   
     var randomNumber = Math.floor(Math.random() * 4);
